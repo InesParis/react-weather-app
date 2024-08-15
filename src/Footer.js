@@ -7,7 +7,7 @@ export default function Footer() {
         Coded by <a href="https://github.com/InesParis">Inés Paris</a> hosted on
         <a href="https://github.com/InesParis/MetoForecastApp">GitHub</a> and
         website hosted on
-        <a href="https://weathermeteoforecast.netlify.app/">Netlify</a>
+        <a href="https://reactcodedweatherapp.netlify.app/">Netlify</a>
       </footer>
     </div>
   );
