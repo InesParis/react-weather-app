@@ -1,12 +1,12 @@
 import React from "react";
-import SearchEngine from "./SearchEngine";
+
 import "./WeatherData.css";
 import ReactAnimatedWeather from "react-animated-weather";
-export default function WeatherData() {
+export default function WeatherData({ city }) {
   return (
     <div class="weather-app-data">
       <div>
-        <h1 class="weather-app-city">San Francisco</h1>
+        <h1 class="weather-app-city">{city}</h1>
         <p class="weather-app-detail ">
           <span>Thur 15 Aug 2024 15:19</span>
           <br />

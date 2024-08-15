@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./SearchEngine.css";
-export default function SearchEngine() {
+export default function SearchEngine({ onCityChange }) {
   let [city, setCity] = useState("");
   function handleSubmit(event) {
     event.preventDefault();
+    onCityChange(city);
   }
 
   function updateCity(event) {

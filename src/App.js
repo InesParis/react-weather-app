@@ -1,24 +1,17 @@
 import "./App.css";
-import SearchEngine from "./SearchEngine";
-import WeatherData from "./WeatherData";
+
 import Forecast from "./Forecast";
+import DisplayWeather from "./DisplayWeather.js";
 import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          <SearchEngine />
-        </p>
+        <p></p>
         <div>
-          <WeatherData />
+          <DisplayWeather />
         </div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
+
         <div>
           <Forecast />
         </div>
