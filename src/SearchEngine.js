@@ -10,18 +10,21 @@ export default function SearchEngine() {
     setCity(event.target.value);
   }
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          onChange={updateCity}
-          type="search"
-          placehorder="Enter a city"
-          requiere
-          id="search-form-input"
-          class="search-form-input"
-        />
-        <input type="submit" value="Search" class="search-form-button" />
-      </form>
-    </div>
+    <header>
+      <div>
+        <div class="title">Weather App</div>
+        <form onSubmit={handleSubmit}>
+          <input
+            onChange={updateCity}
+            type="search"
+            placehorder="Enter a city"
+            requiere
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </div>
+    </header>
   );
 }

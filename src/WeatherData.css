@@ -1,5 +1,5 @@
 strong {
-  color: #f65282;
+  color: rgb(255, 255, 204);
 }
 .weather-app-data {
   display: flex;
@@ -22,10 +22,7 @@ main {
   color: rgba(39, 33, 66, 04);
   font-weight: 500;
 }
-.current-weather-icon {
-  width: 88px;
-  height: 88px;
-}
+
 .weather-app-temperature-container {
   display: flex;
 }

@@ -1,3 +1,10 @@
+.title {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  padding: 30px;
+  margin-top: 0;
+}
 .weather-app {
   background: #fce3e7;
   max-width: 600px;
@@ -9,10 +16,10 @@
 .search-form-input {
   background-color: #f9f7fd;
   border: none;
-  border-radius: 6px;
+  border-radius: 9px;
   width: 80%;
   font-size: 16px;
-  padding: 15px 20px;
+  padding: 15px 15px;
 }
 .search-form-button {
   background: purple;

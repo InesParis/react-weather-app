@@ -2,6 +2,7 @@ import "./App.css";
 import SearchEngine from "./SearchEngine";
 import WeatherData from "./WeatherData";
 import Forecast from "./Forecast";
+import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function App() {
           <Forecast />
         </div>
       </header>
+      <Footer />
     </div>
   );
 }

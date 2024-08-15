@@ -16,14 +16,16 @@ export default function WeatherData() {
       </div>
       <main>
         <div class="weather-app-temperature-container">
-          <div class="temperature">18</div>
-          <ReactAnimatedWeather
-            class="current-weather-icon"
-            icon="CLEAR_DAY"
-            color="BLACK"
-            size={50}
-            animate={true}
-          />
+          <div class="temperature">
+            18
+            <ReactAnimatedWeather
+              class="current-weather-icon"
+              icon="CLOUDY"
+              color="BLACK"
+              size={70}
+              animate={true}
+            />
+          </div>
         </div>
       </main>
     </div>
