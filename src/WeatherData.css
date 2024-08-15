@@ -34,3 +34,7 @@ main {
 .temperature {
   font-size: 88px;
 }
+.temperature.units {
+  font-size: 35px;
+  padding: 0;
+}

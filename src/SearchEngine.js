@@ -13,7 +13,7 @@ export default function SearchEngine({ onCityChange }) {
   return (
     <header>
       <div>
-        <div class="title">Weather App</div>
+        <div className="title">Weather App</div>
         <form onSubmit={handleSubmit}>
           <input
             onChange={updateCity}
@@ -21,9 +21,10 @@ export default function SearchEngine({ onCityChange }) {
             placehorder="Enter a city"
             requiere
             id="search-form-input"
-            class="search-form-input"
+            className="search-form-input"
+            autoFocur="on"
           />
-          <input type="submit" value="Search" class="search-form-button" />
+          <input type="submit" value="Search" className="search-form-button" />
         </form>
       </div>
     </header>

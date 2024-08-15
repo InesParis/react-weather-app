@@ -2,24 +2,31 @@ import React from "react";
 
 import "./WeatherData.css";
 import ReactAnimatedWeather from "react-animated-weather";
-export default function WeatherData({ city }) {
+export default function WeatherData({
+  city,
+  temperature,
+  condition,
+  humidity,
+  wind,
+}) {
   return (
-    <div class="weather-app-data">
+    <div className="weather-app-data">
       <div>
-        <h1 class="weather-app-city">{city}</h1>
-        <p class="weather-app-detail ">
+        <h1 className="weather-app-city">{city}</h1>
+        <p className="weather-app-detail ">
           <span>Thur 15 Aug 2024 15:19</span>
           <br />
-          <span>Scattered cloud</span> <br />
-          Humidity: <strong>10%</strong>, Wind: <strong>3km/h </strong>
+          <span>{condition}</span> <br />
+          Humidity: <strong>{humidity}%</strong> , Wind:
+          <strong> {wind}km/h </strong>
         </p>
       </div>
       <main>
-        <div class="weather-app-temperature-container">
-          <div class="temperature">
-            18
+        <div className="weather-app-temperature-container">
+          <div className="temperature">
+            {temperature}
             <ReactAnimatedWeather
-              class="current-weather-icon"
+              className="current-weather-icon"
               icon="CLOUDY"
               color="BLACK"
               size={70}
