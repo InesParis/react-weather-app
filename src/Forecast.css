@@ -1,0 +1,19 @@
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.weather-forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: #f65282;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
