@@ -4,7 +4,6 @@ export default function FomattedDate(props) {
     // If date is not valid, return null or a placeholder
     return null;
   }
-
   let days = [
     "Sunday",
     "Monday",

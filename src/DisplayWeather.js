@@ -35,7 +35,7 @@ export default function DisplayWeather() {
     <div>
       <SearchEngine onCityChange={handleCityChange} />
       {date && <FormattedDate date={date} />}
-      {/* Render only if date is valid */}
+
       {ready ? (
         <WeatherData
           city={city}
