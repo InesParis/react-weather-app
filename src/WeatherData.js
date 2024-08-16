@@ -1,7 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 import "./WeatherData.css";
-import ReactAnimatedWeather from "react-animated-weather";
 export default function WeatherData({
   city,
   temperature,
@@ -9,6 +9,7 @@ export default function WeatherData({
   humidity,
   wind,
   date,
+  icon,
 }) {
   return (
     <div className="weather-app-data">
@@ -28,13 +29,7 @@ export default function WeatherData({
         <div className="weather-app-temperature-container">
           <div className="temperature">
             {temperature}
-            <ReactAnimatedWeather
-              className="current-weather-icon"
-              icon="CLOUDY"
-              color="BLACK"
-              size={70}
-              animate={true}
-            />
+            <WeatherIcon code={icon} />
           </div>
         </div>
       </main>

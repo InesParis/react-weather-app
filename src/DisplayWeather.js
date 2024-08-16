@@ -11,6 +11,8 @@ export default function DisplayWeather() {
   let [wind, setWind] = useState(null);
   let [ready, setReady] = useState(false);
   let [date, setDate] = useState("");
+  let [icon, setIcon] = useState("");
+
   useEffect(() => {
     if (city) {
       let apiKey = "4f2360cc5d2fbf9f02a9o90ddad3f50t";
@@ -24,8 +26,9 @@ export default function DisplayWeather() {
     setCondition(response.data.condition.description);
     setHumidity(response.data.temperature.humidity);
     setWind(response.data.wind.speed);
-    setReady(true);
     setDate(new Date(response.data.time * 1000));
+    setIcon(response.data.condition.icon);
+    setReady(true);
   }
   function handleCityChange(newCity) {
     setCity(newCity);
@@ -43,6 +46,7 @@ export default function DisplayWeather() {
           condition={condition}
           humidity={humidity}
           wind={wind}
+          icon={icon}
         />
       ) : (
         "Loading..."
