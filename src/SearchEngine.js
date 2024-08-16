@@ -22,7 +22,7 @@ export default function SearchEngine({ onCityChange }) {
             requiere
             id="search-form-input"
             className="search-form-input"
-            autoFocur="on"
+            autoFocus="on"
           />
           <input type="submit" value="Search" className="search-form-button" />
         </form>

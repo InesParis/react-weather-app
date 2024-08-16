@@ -1,5 +1,5 @@
 import React from "react";
-
+import FormattedDate from "./FormattedDate";
 import "./WeatherData.css";
 import ReactAnimatedWeather from "react-animated-weather";
 export default function WeatherData({
@@ -8,13 +8,16 @@ export default function WeatherData({
   condition,
   humidity,
   wind,
+  date,
 }) {
   return (
     <div className="weather-app-data">
       <div>
         <h1 className="weather-app-city">{city}</h1>
         <p className="weather-app-detail ">
-          <span>Thur 15 Aug 2024 15:19</span>
+          <span>
+            <FormattedDate date={date} />
+          </span>
           <br />
           <span>{condition}</span> <br />
           Humidity: <strong>{humidity}%</strong> , Wind:

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchEngine from "./SearchEngine";
 import WeatherData from "./WeatherData";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 export default function DisplayWeather() {
   let [city, setCity] = useState("San Francisco");
@@ -8,8 +9,8 @@ export default function DisplayWeather() {
   let [condition, setCondition] = useState("");
   let [humidity, setHumidity] = useState(null);
   let [wind, setWind] = useState(null);
-
   let [ready, setReady] = useState(false);
+  let [date, setDate] = useState("");
   useEffect(() => {
     if (city) {
       let apiKey = "4f2360cc5d2fbf9f02a9o90ddad3f50t";
@@ -23,17 +24,18 @@ export default function DisplayWeather() {
     setCondition(response.data.condition.description);
     setHumidity(response.data.temperature.humidity);
     setWind(response.data.wind.speed);
-
     setReady(true);
+    setDate(new Date(response.data.time * 1000));
   }
   function handleCityChange(newCity) {
     setCity(newCity);
     setReady(false);
   }
-
   return (
     <div>
       <SearchEngine onCityChange={handleCityChange} />
+      {date && <FormattedDate date={date} />}
+      {/* Render only if date is valid */}
       {ready ? (
         <WeatherData
           city={city}
