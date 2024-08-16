@@ -19,6 +19,6 @@ export default function WeatherIcon({ code }) {
   };
   const icon = codeMapping[code];
   return (
-    <ReactAnimatedWeather icon={icon} color="BLACK" size={44} animate={true} />
+    <ReactAnimatedWeather icon={icon} color="BLACK" size={70} animate={true} />
   );
 }
