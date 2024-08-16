@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import SearchEngine from "./SearchEngine";
 import WeatherData from "./WeatherData";
 import FormattedDate from "./FormattedDate";
+
 import axios from "axios";
 export default function DisplayWeather() {
   let [city, setCity] = useState("San Francisco");
-  let [temperature, setTemperature] = useState("18");
+  let [temperature, setTemperature] = useState("");
   let [condition, setCondition] = useState("");
   let [humidity, setHumidity] = useState(null);
   let [wind, setWind] = useState(null);
@@ -28,6 +29,7 @@ export default function DisplayWeather() {
     setWind(response.data.wind.speed);
     setDate(new Date(response.data.time * 1000));
     setIcon(response.data.condition.icon);
+
     setReady(true);
   }
   function handleCityChange(newCity) {

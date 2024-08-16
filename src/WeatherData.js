@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperatureValue from "./WeatherTemperatureValue";
 import "./WeatherData.css";
 export default function WeatherData({
   city,
@@ -27,8 +28,8 @@ export default function WeatherData({
       </div>
       <main>
         <div className="weather-app-temperature-container">
+          <WeatherTemperatureValue celsius={temperature} />
           <div className="temperature">
-            {temperature}
             <WeatherIcon code={icon} />
           </div>
         </div>
