@@ -1,5 +1,5 @@
 import React from "react";
-import FormattedDate from "./FormattedDate";
+import ForecastFormattedDate from "./ForecastFormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import "./ForecastData.css";
 export default function ForecastData({ forecast }) {
@@ -9,11 +9,16 @@ export default function ForecastData({ forecast }) {
       <div className="forecast-horizontal">
         {forecast.map((day, index) => (
           <div key={index} className="forecast-day">
-            <FormattedDate date={new Date(day.time * 1000)} />{" "}
-            <WeatherIcon code={day.condition.icon} size={50} />
-            <div className="forecast-temperature">
-              {Math.round(day.temperature.day)}°C
+            <ForecastFormattedDate date={new Date(day.time * 1000)} />{" "}
+            <div>
+              <WeatherIcon code={day.condition.icon} size={40} />
             </div>
+            <span className="forecast-temperature-maximum">
+              {Math.round(day.temperature.maximum)} |
+            </span>
+            <span className="forecast-temperature-minimum">
+              {""} {Math.round(day.temperature.minimum)}
+            </span>
             <div className="forecast-condition">
               {day.condition.description}
             </div>
