@@ -1,0 +1,22 @@
+.forecast {
+  margin-top: 20px;
+}
+
+.forecast-horizontal {
+  display: flex;
+  justify-content: space-between; /* Space between each item */
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+.forecast-day {
+  text-align: center;
+  padding: 10px;
+  flex: 1; /* Ensures all forecast days are evenly spaced */
+  min-width: 120px; /* Adjust this based on your design */
+  box-sizing: border-box;
+}
+
+.forecast-day img,
+.forecast-day div {
+  margin-bottom: 8px;
+}
