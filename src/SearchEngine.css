@@ -22,11 +22,13 @@
   padding: 15px 15px;
 }
 .search-form-button {
-  background: purple;
+  background: #856183;
   padding: 15px 30px;
   border: none;
   font-size: 16px;
   margin-left: 5px;
   border-radius: 6px;
-  color: white;
+  color: black;
+  font-family: cursive;
+  font-weight: bold;
 }

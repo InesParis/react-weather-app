@@ -1,13 +1,16 @@
 .App {
   padding: 30px 10px;
-  background: rgb(194, 168, 193);
+  background: #5791c5;
+  opacity: 80%;
   max-width: 600px;
   margin: 45px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 10px;
 }
 body {
-  background: rgb(255, 255, 204);
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/776/original/anton-repponen-3MNzGlQM7qs-unsplash.jpg?1723927315");
+  background-size: cover;
+  background-position: center top;
   font-family: cursive;
 }
 header {

@@ -20,3 +20,8 @@
 .forecast-day div {
   margin-bottom: 8px;
 }
+
+.forecast-temperature-maximum {
+  font-weight: bolder;
+  color: rgb(255, 255, 204);
+}

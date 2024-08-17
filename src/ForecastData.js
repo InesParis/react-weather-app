@@ -14,10 +14,10 @@ export default function ForecastData({ forecast }) {
               <WeatherIcon code={day.condition.icon} size={40} />
             </div>
             <span className="forecast-temperature-maximum">
-              {Math.round(day.temperature.maximum)} |
+              {Math.round(day.temperature.maximum)}º |
             </span>
             <span className="forecast-temperature-minimum">
-              {""} {Math.round(day.temperature.minimum)}
+              {""} {Math.round(day.temperature.minimum)}º
             </span>
             <div className="forecast-condition">
               {day.condition.description}
