@@ -11,9 +11,10 @@ export default function DisplayWeather() {
   let [humidity, setHumidity] = useState(null);
   let [wind, setWind] = useState(null);
   let [ready, setReady] = useState(false);
-  let [date, setDate] = useState("");
+  let [date, setDate] = useState(null);
   let [icon, setIcon] = useState("");
   let [forecast, setForecast] = useState([]);
+
   useEffect(() => {
     if (city) {
       let apiKey = "4f2360cc5d2fbf9f02a9o90ddad3f50t";
@@ -42,7 +43,7 @@ export default function DisplayWeather() {
   return (
     <div>
       <SearchEngine onCityChange={handleCityChange} />
-      {date && <FormattedDate date={date} />}
+      <FormattedDate date={date} />
 
       {ready ? (
         <div>
