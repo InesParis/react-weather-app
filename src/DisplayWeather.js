@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchEngine from "./SearchEngine";
 import WeatherData from "./WeatherData";
 import FormattedDate from "./FormattedDate";
-
+import ForecastData from "./ForecastData";
 import axios from "axios";
 export default function DisplayWeather() {
   let [city, setCity] = useState("San Francisco");
@@ -13,7 +13,7 @@ export default function DisplayWeather() {
   let [ready, setReady] = useState(false);
   let [date, setDate] = useState("");
   let [icon, setIcon] = useState("");
-
+  let [forecast, setForecast] = useState([]);
   useEffect(() => {
     if (city) {
       let apiKey = "4f2360cc5d2fbf9f02a9o90ddad3f50t";
@@ -24,6 +24,7 @@ export default function DisplayWeather() {
 
   function handleResponse(response) {
     const dailyData = response.data.daily[0];
+    const forecastData = response.data.daily.slice(1, 6);
     setTemperature(Math.round(dailyData.temperature.day));
     setCondition(dailyData.condition.description);
     setHumidity(dailyData.temperature.humidity);
@@ -31,6 +32,7 @@ export default function DisplayWeather() {
     setDate(new Date(dailyData.time * 1000)); // Convert UNIX timestamp to Date object
     setIcon(dailyData.condition.icon); // Set the icon URL
 
+    setForecast(forecastData);
     setReady(true);
   }
   function handleCityChange(newCity) {
@@ -43,14 +45,17 @@ export default function DisplayWeather() {
       {date && <FormattedDate date={date} />}
 
       {ready ? (
-        <WeatherData
-          city={city}
-          temperature={temperature}
-          condition={condition}
-          humidity={humidity}
-          wind={wind}
-          icon={icon}
-        />
+        <div>
+          <WeatherData
+            city={city}
+            temperature={temperature}
+            condition={condition}
+            humidity={humidity}
+            wind={wind}
+            icon={icon}
+          />
+          <ForecastData forecast={forecast} />
+        </div>
       ) : (
         "Loading..."
       )}
