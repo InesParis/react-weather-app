@@ -17,18 +17,19 @@ export default function DisplayWeather() {
   useEffect(() => {
     if (city) {
       let apiKey = "4f2360cc5d2fbf9f02a9o90ddad3f50t";
-      let Url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+      let Url = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
       axios.get(Url).then(handleResponse);
     }
   }, [city]);
 
   function handleResponse(response) {
-    setTemperature(Math.round(response.data.temperature.current));
-    setCondition(response.data.condition.description);
-    setHumidity(response.data.temperature.humidity);
-    setWind(response.data.wind.speed);
-    setDate(new Date(response.data.time * 1000));
-    setIcon(response.data.condition.icon);
+    const dailyData = response.data.daily[0];
+    setTemperature(Math.round(dailyData.temperature.day));
+    setCondition(dailyData.condition.description);
+    setHumidity(dailyData.temperature.humidity);
+    setWind(dailyData.wind.speed);
+    setDate(new Date(dailyData.time * 1000)); // Convert UNIX timestamp to Date object
+    setIcon(dailyData.condition.icon); // Set the icon URL
 
     setReady(true);
   }

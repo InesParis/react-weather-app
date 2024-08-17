@@ -1,7 +1,7 @@
 import "./App.css";
 
-import Forecast from "./Forecast";
 import DisplayWeather from "./DisplayWeather.js";
+import Forecast from "./Forecast";
 import Footer from "./Footer";
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         </div>
 
         <div>
-          <Forecast />
+          <Forecast city="Madrid" />
         </div>
       </header>
       <Footer />

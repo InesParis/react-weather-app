@@ -19,7 +19,7 @@ export default function SearchEngine({ onCityChange }) {
             onChange={updateCity}
             type="search"
             placehorder="Enter a city"
-            requiere
+            required
             id="search-form-input"
             className="search-form-input"
             autoFocus="on"

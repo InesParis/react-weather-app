@@ -29,7 +29,7 @@ export default function WeatherData({
       <main>
         <div className="weather-app-temperature-container">
           <div className="temperature">
-            <WeatherIcon code={icon} />
+            <WeatherIcon code={icon} size={70} />
           </div>
           <WeatherTemperatureValue
             className="weather-value"
