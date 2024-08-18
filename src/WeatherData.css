@@ -29,7 +29,6 @@ main {
 
 .weather-app-temperature {
   font-size: 88px;
-  margin-left: 10px;
   font-weight: bold;
 }
 .temperature {
@@ -38,4 +37,11 @@ main {
 .temperature.units {
   font-size: 35px;
   padding: 0;
+}
+.weather-forecast {
+  margin-left: 150px;
+}
+.weather-max {
+  color: rgb(255, 255, 204);
+  font-weight: bolder;
 }

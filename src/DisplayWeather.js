@@ -14,7 +14,8 @@ export default function DisplayWeather() {
   let [date, setDate] = useState(null);
   let [icon, setIcon] = useState("");
   let [forecast, setForecast] = useState([]);
-
+  let [forecastMax, setForecasMax] = useState(null);
+  let [forecastMin, setForecastMin] = useState(null);
   useEffect(() => {
     if (city) {
       let apiKey = "4f2360cc5d2fbf9f02a9o90ddad3f50t";
@@ -32,7 +33,8 @@ export default function DisplayWeather() {
     setWind(dailyData.wind.speed);
     setDate(new Date(dailyData.time * 1000)); // Convert UNIX timestamp to Date object
     setIcon(dailyData.condition.icon); // Set the icon URL
-
+    setForecasMax(dailyData.temperature.maximum);
+    setForecastMin(dailyData.temperature.minimum);
     setForecast(forecastData);
     setReady(true);
   }
@@ -54,6 +56,8 @@ export default function DisplayWeather() {
             humidity={humidity}
             wind={wind}
             icon={icon}
+            forecastMax={forecastMax}
+            forecastMin={forecastMin}
           />
           <ForecastData forecast={forecast} />
         </div>

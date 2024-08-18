@@ -11,6 +11,8 @@ export default function WeatherData({
   wind,
   date,
   icon,
+  forecastMax,
+  forecastMin,
 }) {
   return (
     <div className="weather-app-data">
@@ -35,6 +37,10 @@ export default function WeatherData({
             className="weather-value"
             celsius={temperature}
           />
+        </div>{" "}
+        <div className="weather-forecast">
+          <span className="weather-max"> {Math.round(forecastMax)} ºc |</span>{" "}
+          <span className="weather-min">{Math.round(forecastMin)} ºc</span>
         </div>
       </main>
     </div>
